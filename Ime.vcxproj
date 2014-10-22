@@ -571,7 +571,6 @@
     <ResourceCompile/>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="autoversion.h"/>
     <ClInclude Include="Ime.h"/>
     <ClInclude Include="ImeWrapper.h"/>
     <ClInclude Include="StdAfx.h"/>
