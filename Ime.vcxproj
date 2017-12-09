@@ -241,9 +241,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev_27|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpSdkPath)\Python\27\include;$(CcpSdkPath)\Python\27\include;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(CcpSdkPath)\Python\27\include;$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -259,9 +259,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\Python\27\libs;$(CcpSdkPath)\Python\27\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\telemetry\3.0.1.1008\lib;$(CcpSdkPath)\Python\27\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win32.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>python27.lib;rad_tm_win32.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -272,9 +272,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_27|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;BLUE_WITH_PYTHON=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpSdkPath)\Python\27_64\include;$(CcpSdkPath)\Python\27_64\include;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(CcpSdkPath)\Python\27_64\include;$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WholeProgramOptimization>True</WholeProgramOptimization>
@@ -292,9 +292,9 @@
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\Python\27_64\libs;$(CcpSdkPath)\Python\27_64\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\Python\27_64\libs;$(CcpSdkPath)\telemetry\3.0.1.1008\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win64.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>rad_tm_win64.lib;python27.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -305,9 +305,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_27|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;BLUE_WITH_PYTHON=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpSdkPath)\Python\27\include;$(CcpSdkPath)\Python\27\include;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(CcpSdkPath)\Python\27\include;$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WholeProgramOptimization>True</WholeProgramOptimization>
@@ -325,9 +325,9 @@
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\Python\27\libs;$(CcpSdkPath)\Python\27\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\telemetry\3.0.1.1008\lib;$(CcpSdkPath)\Python\27\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win32.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>python27.lib;rad_tm_win32.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -338,9 +338,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>_DEBUG;CCP_ASSERT_ENABLED=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;..\..\..\carbon\src\stackless\pc;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -356,9 +356,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\carbon\autobuild\stackless\$(Platform);$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue_d.lib;python27_d.lib;rad_tm_win64.lib;python27_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>python27_d.lib;blue_d.lib;rad_tm_win64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -369,9 +369,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_27|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>_DEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -387,7 +387,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\telemetry\3.0.1.1008\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalDependencies>blue_d.lib;rad_tm_win64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -400,9 +400,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev_27|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpSdkPath)\Python\27_64\include;$(CcpSdkPath)\Python\27_64\include;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(CcpSdkPath)\Python\27_64\include;$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -418,9 +418,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\Python\27_64\libs;$(CcpSdkPath)\Python\27_64\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\Python\27_64\libs;$(CcpSdkPath)\telemetry\3.0.1.1008\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win64.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>rad_tm_win64.lib;python27.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -431,9 +431,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;..\..\..\carbon\src\stackless\pc;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -449,9 +449,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\carbon\autobuild\stackless\$(Platform);$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win32.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>python27.lib;rad_tm_win32.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -462,9 +462,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_27|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>_DEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -480,7 +480,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../carbon/autobuild/blue/python_27/$(Platform)/$(PlatformToolset)/;$(CcpSdkPath)\telemetry\3.0.1.1008\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <AdditionalDependencies>blue_d.lib;rad_tm_win32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -493,9 +493,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>_DEBUG;CCP_ASSERT_ENABLED=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;..\..\..\carbon\src\stackless\pc;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -511,9 +511,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\carbon\autobuild\stackless\$(Platform);$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue_d.lib;python27_d.lib;rad_tm_win32.lib;python27_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>python27_d.lib;blue_d.lib;rad_tm_win32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -524,9 +524,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;CCP_ASSERT_ENABLED=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;..\..\..\carbon\src\stackless\pc;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <TreatWarningAsError>True</TreatWarningAsError>
@@ -542,9 +542,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\carbon\autobuild\stackless\$(Platform);$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win64.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>rad_tm_win64.lib;python27.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -555,9 +555,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;..\..\..\carbon\src\stackless\pc;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WholeProgramOptimization>True</WholeProgramOptimization>
@@ -575,9 +575,9 @@
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>..\..\..\carbon\autobuild\stackless\$(Platform);$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win64.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>rad_tm_win64.lib;python27.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
@@ -588,9 +588,9 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>NDEBUG;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;BLUE_WITH_PYTHON=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;BLUE_WITH_PYTHON=1;CCP_STACKLESS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\include;..\..\..\carbon\src\stackless\stackless;..\..\..\carbon\src\stackless\pc;.;$(CcpBranchPath)/carbon/src;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\carbon\src\stackless\pc;..\..\..\carbon\src\stackless\stackless;$(CcpSdkPath)\telemetry\3.0.1.1008\include;..\..\..\carbon\src\stackless\include;$(CcpBranchPath)/carbon/src;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>True</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WholeProgramOptimization>True</WholeProgramOptimization>
@@ -608,9 +608,9 @@
     <Link>
       <GenerateDebugInformation>True</GenerateDebugInformation>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>..\..\..\carbon\autobuild\stackless\$(Platform);$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CcpSdkPath)\telemetry\3.0.1.1008\lib;../../../carbon/autobuild/blue/exefile/$(Platform)/$(PlatformToolset)/;..\..\..\carbon\autobuild\stackless\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>blue.lib;python27.lib;rad_tm_win32.lib;python27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>python27.lib;rad_tm_win32.lib;blue.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile/>
     <Manifest/>
