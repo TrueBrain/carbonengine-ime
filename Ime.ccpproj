@@ -88,7 +88,7 @@ Configurations:
     - Release
     Imports:
     - ../blue/Include/uses_blue_27.yaml
-    - ../../../../../../sdk/python/Python_2.7.yaml
+    - ../../../../../../sdk/python/ccpproj/Python_2.7.yaml
     General:
       TargetName: _ime
 
@@ -106,7 +106,7 @@ Configurations:
     - Debug
     Imports:
     - ../blue/Include/uses_blue_27.yaml
-    - ../../../../../../sdk/python/Python_2.7.yaml
+    - ../../../../../../sdk/python/ccpproj/Python_2.7.yaml
     General:
       TargetName: _ime_d
 
@@ -124,7 +124,7 @@ Configurations:
     - Dev
     Imports:
     - ../blue/Include/uses_blue_27.yaml
-    - ../../../../../../sdk/python/Python_2.7.yaml
+    - ../../../../../../sdk/python/ccpproj/Python_2.7.yaml
     General:
       TargetName: _ime_dev
 
