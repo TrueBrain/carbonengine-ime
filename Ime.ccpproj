@@ -79,7 +79,7 @@ Configurations:
     - Release
     Imports:
     - ../blue/Include/uses_blue.yaml
-    - ../stackless/stackless.yaml
+    - ../stackless/Include/stackless.yaml
     General:
       TargetName: _ime
 
@@ -97,7 +97,7 @@ Configurations:
     - Debug
     Imports:
     - ../blue/Include/uses_blue.yaml
-    - ../stackless/stackless.yaml
+    - ../stackless/Include/stackless.yaml
     General:
       TargetName: _ime_d
 
@@ -115,7 +115,7 @@ Configurations:
     - Dev
     Imports:
     - ../blue/Include/uses_blue.yaml
-    - ../stackless/stackless.yaml
+    - ../stackless/Include/stackless.yaml
     General:
       TargetName: _ime_dev
 
