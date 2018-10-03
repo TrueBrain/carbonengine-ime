@@ -153,8 +153,8 @@ PyObject* Ime::PySetHWND(PyObject* args)
 
 	if (PyInt_Check(wHandle))
 	{
-		long handle;
-		handle = PyInt_AsLong(wHandle);
+		unsigned long long handle;
+		handle = PyInt_AsUnsignedLongLongMask(wHandle);
 		m_hWnd = (HWND)handle;
 	}
 	else
@@ -490,18 +490,11 @@ PyObject* Ime::PyGetConversionList(PyObject* args)
 //ImmIsIME
 PyObject* Ime::PyIsIME(PyObject* args)
 {
-	long lKl = (long)ImeWrapper::GetHKL();
-	if (!PyArg_ParseTuple(args, "|i", &lKl))
+	unsigned long long lKl = (unsigned long long)ImeWrapper::GetHKL();
+	if (!PyArg_ParseTuple(args, "|K", &lKl))
 		return 0;
-	
-	if (ImeWrapper::ImmIsIME((HKL)lKl))
-	{
-		return PyInt_FromLong(1);
-	}
-	else
-	{
-		return PyInt_FromLong(0);
-	}
+
+	return PyInt_FromLong(ImeWrapper::ImmIsIME((HKL)lKl));
 }
 
 PyObject* Ime::PyGetImeId(PyObject* args)
@@ -791,9 +784,9 @@ PyObject* Ime::PyGetReadingString(PyObject* args)
 //ActivateKeyboardLayout HKL as an int or long
 PyObject* Ime::PyActivateKeyboardLayout(PyObject* args)
 {		
-	long lKL;
+	unsigned long long lKL;
 	UINT uFlags;
-	if (!PyArg_ParseTuple(args, "ii", &lKL, &uFlags))
+	if (!PyArg_ParseTuple(args, "Ki", &lKL, &uFlags))
 		return 0;
 
 	ActivateKeyboardLayout((HKL)lKL, uFlags);
@@ -810,7 +803,7 @@ PyObject* Ime::PyGetKeyboardLayout(PyObject* args)
 {		
 	if (!PyArg_ParseTuple(args, ""))
 		return 0;
-	return PyInt_FromLong((long)GetKeyboardLayout(::GetCurrentThreadId()));
+	return PyInt_FromSize_t((size_t)GetKeyboardLayout(::GetCurrentThreadId()));
 }
 
 //GetKeyboardLayoutList
@@ -829,7 +822,7 @@ PyObject* Ime::PyGetKeyboardLayoutList(PyObject* args)
 
 	for (UINT i = 0; i < uSize; i++)
 	{
-		PyList_SET_ITEM(list, i, PyInt_FromLong((long)hKLs[i]));
+		PyList_SET_ITEM(list, i, PyInt_FromSize_t((size_t)hKLs[i]));
 	}
 
 	delete [] hKLs;
@@ -960,8 +953,8 @@ PyObject* Ime::PyBackspace(PyObject* args)
 
 PyObject* Ime::PyGetIMEFileName(PyObject* args)
 {
-	long lKL = (long)::GetKeyboardLayout(::GetCurrentThreadId());
-	if (!PyArg_ParseTuple(args, "|i", &lKL))
+	unsigned long long lKL = (unsigned long long)::GetKeyboardLayout(::GetCurrentThreadId());
+	if (!PyArg_ParseTuple(args, "|K", &lKL))
 		return 0;
 
 	CHAR szImeFile[MAX_PATH + 1];
