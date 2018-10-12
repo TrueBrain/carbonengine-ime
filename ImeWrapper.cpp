@@ -398,7 +398,7 @@ DWORD ImeWrapper::GetImeId(UINT uIndex)
         {
             if (GetFileVersionInfoA(szTmp, dwVerHandle, dwVerSize, lpVerBuffer))
             {
-                if (VerQueryValueA(lpVerBuffer, "\\", &lpVerData, &cbVerData))
+                if (VerQueryValueA(lpVerBuffer, (LPSTR)"\\", &lpVerData, &cbVerData))
                 {
                     DWORD dwVer = ((VS_FIXEDFILEINFO*)lpVerData )->dwFileVersionMS;
                     dwVer = (dwVer & 0x00ff0000) << 8 | (dwVer & 0x000000ff) << 16;
