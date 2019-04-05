@@ -52,6 +52,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a3ff2792-ce0b-420a-a202-92c0b66e0b98}</ProjectGuid>
+    <ProjectName>ime</ProjectName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev_27|Win32'" Label="Configuration">
     <PlatformToolset>v100</PlatformToolset>
