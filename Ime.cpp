@@ -8,8 +8,6 @@
 const char* BLUEMODULENAME = "_ime";
 const char* g_moduleName = "Ime";
 
-bool isWinNT = false;
-
 static void StartDLL()
 {
 	CCP_LOG( "%s module starting", BLUEMODULENAME );
@@ -633,16 +631,14 @@ PyObject* Ime::PyGetReadingString(PyObject* args)
 
 				case IMEID_CHS_VER42: // 4.2.x.x // SCIME98 or MSPY2 (w/Office2k, Win2k, WinME, etc)
 				{
-					extern bool isWinNT;
-
-					int nTcharSize = (isWinNT) ? sizeof(WCHAR) : sizeof(char);
+					int nTcharSize = sizeof(WCHAR);
 					p = *(LPBYTE *)((LPBYTE)ImeWrapper::ImmLockIMCC(lpIC->hPrivate) + 1*4 + 1*4 + 6*4);
 					if (!p)
 						break;
 					dwReadingStrLen = *(DWORD *)(p + 1*4 + (16*2+2*4) + 5*4 + 16 * nTcharSize);
 					dwErr = *(DWORD *)(p + 1*4 + (16*2+2*4) + 5*4 + 16 * nTcharSize + 1*4);
 					wstr  = (WCHAR *) (p + 1*4 + (16*2+2*4) + 5*4);
-					bUnicodeIme = (isWinNT) ? true : false;
+					bUnicodeIme = true;
 				}
 			}   // switch
 		}
