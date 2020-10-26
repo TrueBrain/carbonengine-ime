@@ -15,9 +15,17 @@ Ime::~Ime()
 
 void Ime::SetHWND( uintptr_t handle )
 {
-	m_window = reinterpret_cast<HWND>( handle );
-	m_imc = ImeWrapper::ImmGetContext( m_window );
-	ImeWrapper::ImmReleaseContext( m_window, m_imc );
+	auto window = reinterpret_cast<HWND>( handle );
+	if( window != m_window )
+	{
+		if( m_window )
+		{
+			ImeWrapper::ImmReleaseContext( m_window, m_imc );
+		}
+
+		m_window = window;
+		m_imc = ImeWrapper::ImmGetContext( m_window );
+	}
 }
 
 void Ime::AssociateContext( bool show )
