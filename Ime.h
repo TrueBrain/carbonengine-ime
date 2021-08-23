@@ -2,7 +2,7 @@
 
 #include "ImeWrapper.h"
 
-#if IME_ENABLED
+#include <string>
 
 BLUE_CLASS( Ime ) : public IRoot
 {
@@ -11,6 +11,11 @@ public:
 
 	Ime( IRoot* lockobj = nullptr );
 	~Ime();
+	
+#if __APPLE__
+	std::wstring GetKeyboardLayout();
+
+#elif _WIN32
 
 	void SetHWND( uintptr_t handle );
 	void AssociateContext( bool show );
@@ -25,8 +30,7 @@ public:
 private:
 	HWND m_window = nullptr;
 	HIMC m_imc = nullptr;
+#endif
 };
 
 TYPEDEF_BLUECLASS( Ime );
-
-#endif

@@ -1,8 +1,6 @@
 #include "StdAfx.h"
 #include "Ime.h"
 
-#if IME_ENABLED
-
 BLUE_DEFINE( Ime );
 
 const Be::ClassInfo* Ime::ExposeToBlue()
@@ -10,6 +8,14 @@ const Be::ClassInfo* Ime::ExposeToBlue()
 	EXPOSURE_BEGIN( Ime, "" )
 		MAP_INTERFACE( Ime )
 
+#if __APPLE__
+        MAP_METHOD_AND_WRAP
+        (
+            "GetKeyboardLayout",
+            GetKeyboardLayout,
+            "Returns the input source ID string for the currently selected keyboard layout."
+        )
+#elif _WIN32
 		MAP_METHOD_AND_WRAP( "SetHWND", SetHWND, "Please pass trinity.app.GetHwndAsLong()" )
 		MAP_METHOD_AND_WRAP( "AssociateContext", AssociateContext, "..." )
 		MAP_METHOD_AND_WRAP( "GetCursorPos", GetCursorPos, "..." )
@@ -19,9 +25,8 @@ const Be::ClassInfo* Ime::ExposeToBlue()
 		MAP_METHOD_AND_WRAP( "SimulateHotKey", SimulateHotKey, "..." )
 		MAP_METHOD_AND_WRAP( "GetOpenStatus", GetOpenStatus, "..." )
 		MAP_METHOD_AND_WRAP( "SetOpenStatus", SetOpenStatus, "..." )
-
-		EXPOSURE_END()
-
+#endif
+	
+	EXPOSURE_END()
 }
 
-#endif

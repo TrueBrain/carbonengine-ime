@@ -1,7 +1,7 @@
 #include "StdAfx.h"
 #include "ImeWrapper.h"
 
-#if IME_ENABLED
+#if _WIN32
 
 HINSTANCE ImeWrapper::s_hDllImm32;
 LONG( WINAPI* ImeWrapper::m_fpImmGetCompositionStringW )( HIMC hIMC, DWORD dwIndex, LPVOID lpBuf, DWORD dwBufLen ) = nullptr;

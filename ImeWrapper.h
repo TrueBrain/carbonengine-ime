@@ -1,6 +1,6 @@
 #pragma once
 
-#if IME_ENABLED
+#if _WIN32
 
 class ImeWrapper
 {

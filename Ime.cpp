@@ -1,7 +1,25 @@
 #include "StdAfx.h"
 #include "Ime.h"
+#include "KeyboardLayoutMac.h"
 
-#if IME_ENABLED
+#if __APPLE__
+
+Ime::Ime( IRoot* lockobj )
+{
+	
+}
+
+Ime::~Ime()
+{
+	
+}
+
+std::wstring Ime::GetKeyboardLayout()
+{
+    return GetKeyboardLayoutMac();
+}
+
+#elif _WIN32
 
 Ime::Ime( IRoot* lockobj )
 {
