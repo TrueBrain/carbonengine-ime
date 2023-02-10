@@ -20,7 +20,7 @@ include(CcpGlobalSettings)
 
 find_package(Blue REQUIRED)
 
-add_library(Ime SHARED
+ccp_add_library(Ime SHARED
     Ime.h
     ImeWrapper.h
     KeyboardLayoutMac.h
