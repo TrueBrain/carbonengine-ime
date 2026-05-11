@@ -62,12 +62,9 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         install(
             EXPORT ImeTargets
             DESTINATION share/carbon-ime
-            FILE carbon-ime.cmake
+            FILE carbon-imeConfig.cmake
         )
 
-        install(
-            FILES carbon-imeConfig.cmake DESTINATION share/carbon-ime
-        )
     endif()
 
     # Install python packages
