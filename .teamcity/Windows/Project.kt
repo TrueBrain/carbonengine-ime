@@ -50,6 +50,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
                 options = listOf("v141 (2017)" to "v141", "v143 (2022)" to "v143"))
         param("env.CMAKE_BUILD_TARGETS", "all")
         param("env.CMAKE_INSTALL_PREFIX", ".build-artifact")
+        param("env.VISUAL_STUDIO_COMPILER_TOOLSET", "14.1")
         param("env.CMAKE_CONFIG_TYPE", configType)
         param("env.SENTRY_PROJECT", "exefile-crashes")
         param("env.CMAKE_BUILD_FOLDER", ".cmake-build-%build.number%")
@@ -89,7 +90,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
             scriptContent = """
                 REM unfortunately ninja does not find the VS environment otherwise
                 REM NB: the exported PATH also contains the location where we installed sentry-cli, e.g. teamcity.agent.work.dir
-                call "%env.VSDEV_BAT_PATH%" -arch=x64 -vcvars_ver=14.1
+                call "%env.VSDEV_BAT_PATH%" -arch=x64 -vcvars_ver=%env.VISUAL_STUDIO_COMPILER_TOOLSET%
                 echo ##teamcity[setParameter name='env.INCLUDE' value='%%INCLUDE%%']
                 echo ##teamcity[setParameter name='env.LIB' value='%%LIB%%']
                 echo ##teamcity[setParameter name='env.LIBPATH' value='%%LIBPATH%%']
