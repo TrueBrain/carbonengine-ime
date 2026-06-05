@@ -1,3 +1,5 @@
+# Copyright © 2014 CCP ehf.
+
 # Basic smoketests to make sure nothing crashes when called.
 
 import unittest2

@@ -1,3 +1,5 @@
+// Copyright © 2021 CCP ehf.
+
 #import "KeyboardLayoutMac.h"
 
 #import <Carbon/Carbon.h>
